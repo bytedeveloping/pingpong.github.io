@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .game-container {
+            text-align: center;
+        }
+
+        canvas {
+            display: block;
+            border: 3px solid white;
+            background-color: #000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .info {
+            color: white;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .info h1 {
+            margin: 10px 0;
+            font-size: 32px;
+        }
+
+        .controls {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .score {
+            color: #0f0;
+            font-size: 20px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="color: white; margin-bottom: 10px;">🏓 Ping Pong</h1>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div class="info">
+            <div class="score">
+                <span id="player1Score">0</span> : <span id="player2Score">0</span>
+            </div>
+            <div class="controls">
+                <p><strong>Player 1 (Left):</strong> UP / DOWN Arrow Keys</p>
+                <p><strong>Player 2 (Right):</strong> UP / DOWN Arrow Keys</p>
+                <p style="margin-top: 20px; color: #0f0;"><strong>SPACE</strong> to Start/Pause | <strong>R</strong> to Reset</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
